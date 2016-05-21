@@ -9,14 +9,13 @@ M.tech CSIS(PG1)
      Similation of the key management protocol in WSNs:A key-management scheme for distributed sensor networks.
 ____________________________________________________________________________________________________________________________
 
-_____________________________________________________Task 1________________________________________________________________
-
+________________________________________________Task 1_____________________________________________________________
 -> No. of sensor nodes are taken as an input from the user, say n.
 -> n no. of unique sample points are generated in the range of (L1 X l2) i.e (500 X 500).
 -> The no of sensor nodes, and all the points(locations) are stored in the file provided as an argument.
 -> Gnuplot is called using System command and the graph is plotted by dynamically creating "name.gp" file at the run time.
 
-_____________________________________________________Task 2________________________________________________________________
+___________________________________________________Task 2________________________________________________________
 
 -> This task aims at finding the direct key establishment in the simulated environment.
 -> All the physical neighbours are find out if the lie in the radius < 25.0 (i.e. euclidean distance is calculated from all
@@ -26,7 +25,7 @@ the remaining points).
 gives the network connectivity for the direct key establishment phase.
 
 
-_____________________________________________________Task 3______________________________________________________________
+_________________________________________________Task 3_________________________________________________________
 
 -> This task aims at finding the path key establishment in the simulated environment for the physical neighbours who cannot 
 directly exchange a key, so will exchange the key using HOP - 1 or HOP -2.
@@ -54,9 +53,9 @@ points generated during Task1.
 				$ ./a.out sensor.data 100 40000
 
 
-==============================================================================================================================
+==============================================================================================================
  						    Sample Output
-==============================================================================================================================
+==============================================================================================================
 Enter the no of sensor nodes
 10000
 Scaling communication range...
