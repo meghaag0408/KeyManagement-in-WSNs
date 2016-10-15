@@ -6,13 +6,15 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 typedef struct 
 {
   int x; /* x-coordinate of sensor node location in target field */
   int y; /* y-coordinate of sensor node location in target field */ 
   int neighbour_size;
   vector<int> neighbours_list;  
-} sensor;
+} 
+sensor;
 
 sensor sensor_node[100000];
 

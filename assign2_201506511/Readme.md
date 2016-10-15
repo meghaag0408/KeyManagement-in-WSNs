@@ -1,0 +1,76 @@
+****************************************************************************************************************************
+NAME - Megha Agarwal
+Roll No - 201506511
+M.tech CSIS(PG2)
+****************************************************************************************************************************
+
+****************************************************************************************************************************
+     			Implementation of the Blom’s single-space key pre-distribution scheme
+____________________________________________________________________________________________________________________________
+
+____________________________________________________Assumptions_____________________________________________________________
+-> q is considered to be in range of qmin and qmax defined above as :
+		#define qmax 1000
+		#define qmin 2
+   The value of qmin can be changed as per the number of bits given.
+-> The number of n is assumed to 600.
+-> The value of lamba is considered to be 100 for the given n.
+		#define totalnodes 600
+		#define lambda_value 100
+
+
+_________________________________________________Implementation_____________________________________________________________
+-> A random odd number is generated in the given range (qmin, qmax).
+-> The odd numbers are generated in a loop till we find a odd prime number.
+-> Prime numbers are checked using Miller Rabin Primality Test.
+-> Primitive root (g) is generated for the given (q). The smallest g value is returned.
+-> The following matrices are created :
+	matrix_G - (lamba+1) * n
+	matrix D - (lamba+1) * (lamba+1) - Symmetric matrix.
+	matrix A - Transpose(A.G)
+	matrix K - (A.G) - n*n matrix. -> Key matrix.
+
+____________________________________________________________________________________________________________________________
+Note: 
+The keys.txt file contains :
+
+Physical neighbour list of sensor nodes as :
+NL0 :
+NL1 :
+'
+'
+'
+NL599 :
+
+Key Neighbours : Key(i,j) of Sensor Nodes
+Key(i,j) 0 : 
+Key(i,j) 1 :
+'
+'
+'
+Key(i,j) 599 :
+
+
+****Keys can be exchanged only between the neighbours which are in communication range of 25 m.
+____________________________________________________________________________________________________________________________
+
+==============================================================================================================================
+ 						Compilation and running 
+==============================================================================================================================
+-> We need to compile using -lm to use math library.
+
+				$ gcc assign2_201506511.c -lm
+
+				$ ./a.out
+
+==============================================================================================================
+ 						    Sample Output
+Primitie Root Genarated : 7, For Prime Number: 239
+
+Priniting subset (5*5) symmetric matrix K
+228 180 135 160 2 
+180 74 233 88 203 
+135 233 61 114 21 
+160 88 114 30 222 
+2 203 21 222 176 
+
