@@ -385,7 +385,7 @@ int main()
     printf("Primitie Root Genarated : %lld, For Prime Number: %lld\n", primitive_root_g, q);
     printf("\n");
     creation_of_matrixG(primitive_root_g, totalnodes, q);
-    //printing_matrixG(matrix_G, 600, 100);
+    printing_matrixG(matrix_G, 600, 100);
 
     matrix_D_generation(lambda_value, q);
     multiply_matrics_matrix_Dmatrix_G(lambda_value, totalnodes, q);

@@ -245,6 +245,7 @@ void creation_of_matrixG(long long int g, long long int n, long long int q)
 void printing_matrixG(long long int matrix_G[][600], long long int n, long long int lambda)
 {
   int i, j; 
+  printf("HERE\n");
   for(i=0; i<lambda+1; i++)
   {
       for(j=0; j<n; j++)
@@ -383,7 +384,7 @@ int main()
     }
     printf("Primitie Root Genarated : %lld, For Prime Number: %lld\n", primitive_root_g, q);
     creation_of_matrixG(primitive_root_g, totalnodes, q);
-    //printing_matrixG(matrix_G, 600, 100);
+    printing_matrixG(matrix_G, 600, 100);
 
     matrix_D_generation(lambda_value, q);
     multiply_matrics_matrix_Dmatrix_G(lambda_value, totalnodes, q);
